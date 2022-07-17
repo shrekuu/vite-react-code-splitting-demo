@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import logo from '../logo.svg'
 
-export default function () {
+export default function Page53 () {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
+        <p>Hello Page53</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}

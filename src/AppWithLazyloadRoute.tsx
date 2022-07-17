@@ -1,7 +1,7 @@
 import { lazy } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Link } from 'react-router-dom'
 
 const Page1 = lazy(() => import('./pages/Page1'))
 const Page2 = lazy(() => import('./pages/Page2'))
@@ -1007,8 +1007,16 @@ const Page1000 = lazy(() => import('./pages/Page1000'))
 function App() {
 
   return (
+    <div>
     <BrowserRouter>
+      <div>
+        <Link className='px-4' to='/'>Home</Link>
+        <Link className='px-4' to='/1'>1</Link>
+        <Link className='px-4' to='/2'>2</Link>
+        <Link className='px-4' to='/1000'>1000</Link>
+      </div>
       <Routes>
+        <Route path='/' element={<Page1 />}></Route>
         <Route path='/1' element={<Page1 />}></Route>
         <Route path='/2' element={<Page2 />}></Route>
         <Route path='/3' element={<Page3 />}></Route>
@@ -2011,6 +2019,7 @@ function App() {
         <Route path='/1000' element={<Page1000 />}></Route>
       </Routes>
     </BrowserRouter>
+    </div>
   )
 }
 
